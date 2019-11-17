@@ -1,6 +1,31 @@
 $$
+f(x+1)=f(x)+ln(x+1)
+$$
+
+$$
+\int_n^{n+1} f(x)=ln(n+1)
+$$
+
+
+$$
 \Gamma(x)=\int_0^{\infty}t^{x-1}e^{-t}dt
 $$
+
+---
+
+$$
+dist = (\sum_{i=1}^{n}|x_i-y_i|^p)^{\frac{1}{p}} 
+$$
+
+$$ dist = z^Tz = (x-\mu)^T\Sigma^{-1}(x-\mu) $$
+
+$$ dp[i][j] = \begin{cases} 0 & i=0,j = 0 \\ j & i=0,j>0 \\ i & i>0,j=0 \\ min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1]) & S_1(i) = S_2(j) \\ min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + 1) & S_1(i) \neq S_2(j) \end{cases} $$
+
+$$ P(\mu-\sigma \leq X \leq \mu + \sigma) \sim 0.6827 $$
+
+$$ P(\mu-2\sigma \leq X \leq \mu + 2\sigma) \sim 0.9545 $$
+
+$$ P(\mu-3\sigma \leq X \leq \mu + 3\sigma) \sim 0.9973 $$
 
 ---
 
