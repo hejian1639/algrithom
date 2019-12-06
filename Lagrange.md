@@ -2,7 +2,7 @@
 $$ 
 \begin{align*}
 & \min f(x) \\
-st. & \\
+s.t. & \\
 & h(x)=0 \\
 & g(x)\leq0 
 \end{align*}
@@ -27,7 +27,7 @@ $$
 $$
 \begin{align*}
 & \max v^T*x \\
-st. & \\
+s.t. & \\
 & w^T*x\leq w_0 \\
 & x\leq E
 \end{align*}
@@ -38,9 +38,11 @@ L(x,\lambda)=-v^T*x+\lambda_0*(w^T*x-w_0)+\lambda^T*(x-E)
 $$
 
 $$
-v_i=\lambda_0*w_i+\lambda_i \\
-\lambda_0*(w^T*x-w_0)=0 \\
-\lambda_i*(x_i-1)=0
+\begin{align*}
+&v_i=\lambda_0*w_i+\lambda_i \\
+&\lambda_0*(w^T*x-w_0)=0 \\
+&\lambda_i*(x_i-1)=0
+\end{align*}
 $$
 
 $$
@@ -51,8 +53,14 @@ L(x,\lambda)=& -v^T*x+\lambda_0*(w^T*x-w_0)+\lambda^T*(x-E) \\
 \end{align*}
 $$
 
+---
+
 $$
-\min \lambda_0*w_0+\lambda^T*E \\
+\begin{align*}
+&\min \lambda_0*w_0+\sum\lambda_i \\
+s.t. & \\
+&v_i=\lambda_0*w_i+\lambda_i \\
+\end{align*}
 $$
 
 ---

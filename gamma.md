@@ -11,21 +11,6 @@ $$
 \Gamma(x)=\int_0^{\infty}t^{x-1}e^{-t}dt
 $$
 
----
-
-$$
-dist = (\sum_{i=1}^{n}|x_i-y_i|^p)^{\frac{1}{p}} 
-$$
-
-$$ dist = z^Tz = (x-\mu)^T\Sigma^{-1}(x-\mu) $$
-
-$$ dp[i][j] = \begin{cases} 0 & i=0,j = 0 \\ j & i=0,j>0 \\ i & i>0,j=0 \\ min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1]) & S_1(i) = S_2(j) \\ min(dp[i][j-1] + 1, dp[i-1][j] + 1, dp[i-1][j-1] + 1) & S_1(i) \neq S_2(j) \end{cases} $$
-
-$$ P(\mu-\sigma \leq X \leq \mu + \sigma) \sim 0.6827 $$
-
-$$ P(\mu-2\sigma \leq X \leq \mu + 2\sigma) \sim 0.9545 $$
-
-$$ P(\mu-3\sigma \leq X \leq \mu + 3\sigma) \sim 0.9973 $$
 
 ---
 
@@ -67,6 +52,10 @@ $$
 
 $$
 \frac{(1+\frac{1}{x})}{e}^x*(x+1)
+$$
+
+$$
+\frac{(1+\frac{\Delta x}{x})}{e^{\Delta x}}^x*(x+\Delta x)^{\Delta x}
 $$
 
 ___
@@ -151,17 +140,14 @@ $$
 
 ---
 
-
-
 $$
 \begin{align*}
-& \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} \\
-= & 1\cdot 2\cdot 3 \cdots n \cdot \frac{(n+1)(n+2)\cdots m}{(1+n)(2+n)\cdots m }
-\cdot \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\
-= & n! \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\
-= & n!\prod_{k=1}^{n} \frac{m+1}{m+k} \rightarrow n! \qquad (m\rightarrow \infty)
+(n+\Delta n)^{\Delta n}&\approx\lim_{n \rightarrow \infty}\frac{(n+\Delta n)!}{n!} \\
+&\approx\lim_{n \rightarrow \infty}\frac{(1+\Delta n)!*(2+\Delta n)*(3+\Delta  n)***(n+\Delta n)}{1*2*3***n} \\
+&\approx \lim_{n \rightarrow \infty} \prod\frac{(n+\Delta n)}{n}*(1+\Delta n)! \\
 \end{align*}
 $$
+
 
 ---
 
