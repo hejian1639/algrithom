@@ -39,10 +39,11 @@ $$
 \frac{\partial loss}{\partial g}=g(x)-y
 $$
 
+
 $$
 \begin{align*}
 {\rm d}loss&=tr{\left((\frac{\partial loss}{\partial g})^T*{\rm d}g\right)} \\
-&=tr{\left((\frac{\partial loss}{\partial g})^T*(\frac{\partial g}{\partial w})^T*{\rm d}w\right)} \\
+&=tr{\left((g(x)-y)^T*(\frac{\partial g}{\partial w})^T*{\rm d}w\right)} \\
 &=tr{\left((g(x)-y)^T*\varphi^T(x)*{\rm d}w\right)} \\
 \end{align*}
 $$
@@ -86,7 +87,5 @@ $$
 
 ---
 $$
-df= tr((\frac{\partial f}{\partial \mathbf{X}})^Td\mathbf{X}) \\
-vec(dF) = vec(AdXB) = (B^T \bigotimes A)vec(dX)
+\begin{pmatrix} 1 & -1 \\ \end{pmatrix}* \begin{pmatrix} x \\ 1 \end{pmatrix} = x-1
 $$
-
